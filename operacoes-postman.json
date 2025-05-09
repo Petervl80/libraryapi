@@ -17,7 +17,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJraWQiOiIwOTZhY2M2Yi03Yjk4LTRhZmUtOGU4NS00NTBjZDg0YWIxNmUiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJnZXJlbnRlIiwiYXVkIjoiY2xpZW50LXByb2R1Y3Rpb24iLCJuYmYiOjE3NDQ3MjcyNDQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MCIsImV4cCI6MTc0NDczMDg0NCwiaWF0IjoxNzQ0NzI3MjQ0LCJqdGkiOiJlMTY1ZWEzOC00ZDRmLTQ2NjMtYjM4Zi1lNmQ0ODM1ZGUyZTMiLCJhdXRob3JpdGllcyI6WyJHRVJFTlRFIl0sImVtYWlsIjoiZ2VyZW50ZUBlbWFpbC5jb20ifQ.e7hSKwjcGTaH5-5CCwLE2S4pggMx6zgt7wa0viC2DERbJ1S0idQaW08ozQDiRcsI5lPHqonTaHbcKyPAkCQZtAiIJwCcCPsNQXk1u2NF7AX1--2dYWQ-spZGdMICYPKPLkLA-zbIMewSPdEDPa9z5V9llS8jJcPLdaBXCRg50RErAwJmaTf50gOPWocCgLB08zNN5UzHoSv0YqUFXaFp16T1adjRFcWs6tP0lducvPqeDM2fMQwRZOM1en64jpbUynaHvOWJgHu2LeAygYRD2C2_l1Dv7tifVxq-dqxQ2JTh5mnsqlX40ZnWKnbYmbAU10joSgQ9Wxkl391raQ4rNg",
+									"value": "{{Token}}",
 									"type": "string"
 								}
 							]
@@ -26,7 +26,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Carlos\",\r\n    \"dataNascimento\": \"1998-01-01\",\r\n    \"nacionalidade\": \"Brasileira\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"Maria\",\r\n    \"dataNascimento\": \"1998-01-01\",\r\n    \"nacionalidade\": \"Brasileira\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -34,12 +34,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/autores",
-							"protocol": "http",
+							"raw": "{{baseURL}}/autores",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"autores"
 							]
@@ -50,18 +48,26 @@
 				{
 					"name": "Buscar por id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/autores/b838e407-c656-450b-be99-979a0c532076",
-							"protocol": "http",
+							"raw": "{{baseURL}}/autores/018f07a8-3e65-48bb-9241-f99d5535e5f3",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"autores",
-								"b838e407-c656-450b-be99-979a0c532076"
+								"018f07a8-3e65-48bb-9241-f99d5535e5f3"
 							]
 						}
 					},
@@ -75,7 +81,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "\neyJraWQiOiI5ZjU5MjFiNi00MTcwLTQwZGUtYjZjMS0yOTA5Yjk1YzgzOWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJtZXUtY2xpZW50IiwiYXVkIjoibWV1LWNsaWVudCIsIm5iZiI6MTc0Mzc4NTMwNywic2NvcGUiOlsiR0VSRU5URSJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjE3NDM3ODg5MDcsImlhdCI6MTc0Mzc4NTMwNywianRpIjoiMmY5MTc1NTQtYzA4ZC00ZTZiLWE3ZjItNTdkZmEyYjJjMjg3In0.O3OkH9jjgxrX6Ifgj8NPAf393pbdO8PU8pEIvwsDDkTJDz94fJyIR6bty9cylAYDrAo2E9ExfhxpUH_GqYTusAeF9M3kNVvkNWqzU_xDym-8v4fqOISjymEFQ3G_MH7CHqS_nUQCuXt_qID0Kkmo7cEC9NKEu9PY_KOht_6zarYPnznObxjXIex64TlfZWNckUW2XK0Go_7IWwf0jxNWd_D7RV8Wj-K21myR3IsvXc7_OLFiQyRysfesSXk0v6kG23WOJoDuBh5mgGAk2vvpt2WWDrWcnOgyhlOLczy4HQiQvn0siSJwtN_rDWpCgl-Jg_EZDelASwMmTloVJ_MdVQ",
+									"value": "{{Token}}",
 									"type": "string"
 								}
 							]
@@ -83,12 +89,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/autores",
-							"protocol": "http",
+							"raw": "{{baseURL}}/autores?nacionalidade=Chinês",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"autores"
 							],
@@ -100,8 +104,7 @@
 								},
 								{
 									"key": "nacionalidade",
-									"value": "Chinês",
-									"disabled": true
+									"value": "Chinês"
 								}
 							]
 						}
@@ -111,15 +114,23 @@
 				{
 					"name": "Deletar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/autores/:id",
-							"protocol": "http",
+							"raw": "{{baseURL}}/autores/:id",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"autores",
 								":id"
@@ -137,11 +148,21 @@
 				{
 					"name": "Atualizar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Carlos\",\r\n    \"dataNascimento\": \"1998-01-01\",\r\n    \"nacionalidade\": \"Brasileira\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"Maria\",\r\n    \"dataNascimento\": \"1998-01-01\",\r\n    \"nacionalidade\": \"Chinês\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -149,12 +170,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/autores/:id",
-							"protocol": "http",
+							"raw": "{{baseURL}}/autores/:id",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"autores",
 								":id"
@@ -162,7 +181,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "b838e407-c656-450b-be99-979a0c532076"
+									"value": "a316d9ef-d356-4ba5-ae57-bbac24ad1939"
 								}
 							]
 						}
@@ -182,7 +201,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJraWQiOiIwOTZhY2M2Yi03Yjk4LTRhZmUtOGU4NS00NTBjZDg0YWIxNmUiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJnZXJlbnRlIiwiYXVkIjoiY2xpZW50LXByb2R1Y3Rpb24iLCJuYmYiOjE3NDQ3MjcyNDQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MCIsImV4cCI6MTc0NDczMDg0NCwiaWF0IjoxNzQ0NzI3MjQ0LCJqdGkiOiJlMTY1ZWEzOC00ZDRmLTQ2NjMtYjM4Zi1lNmQ0ODM1ZGUyZTMiLCJhdXRob3JpdGllcyI6WyJHRVJFTlRFIl0sImVtYWlsIjoiZ2VyZW50ZUBlbWFpbC5jb20ifQ.e7hSKwjcGTaH5-5CCwLE2S4pggMx6zgt7wa0viC2DERbJ1S0idQaW08ozQDiRcsI5lPHqonTaHbcKyPAkCQZtAiIJwCcCPsNQXk1u2NF7AX1--2dYWQ-spZGdMICYPKPLkLA-zbIMewSPdEDPa9z5V9llS8jJcPLdaBXCRg50RErAwJmaTf50gOPWocCgLB08zNN5UzHoSv0YqUFXaFp16T1adjRFcWs6tP0lducvPqeDM2fMQwRZOM1en64jpbUynaHvOWJgHu2LeAygYRD2C2_l1Dv7tifVxq-dqxQ2JTh5mnsqlX40ZnWKnbYmbAU10joSgQ9Wxkl391raQ4rNg",
+									"value": "{{Token}}",
 									"type": "string"
 								}
 							]
@@ -191,7 +210,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"isbn\": \"9781234567897\",\r\n    \"titulo\": \"SLA OQ MANO\",\r\n    \"dataPublicacao\": \"2020-01-01\",\r\n    \"genero\": \"FICCAO\",\r\n    \"preco\": 20,\r\n    \"idAutor\": \"03bb8c8a-425c-4d6a-86d4-88fe15d0032c\"\r\n}",
+							"raw": "{\r\n    \"isbn\": \"9781234567897\",\r\n    \"titulo\": \"SLA OQ\",\r\n    \"dataPublicacao\": \"2020-01-01\",\r\n    \"genero\": \"FICCAO\",\r\n    \"preco\": 20,\r\n    \"idAutor\": \"018f07a8-3e65-48bb-9241-f99d5535e5f3\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -199,12 +218,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/livros",
-							"protocol": "http",
+							"raw": "{{baseURL}}/livros",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"livros"
 							]
@@ -215,11 +232,21 @@
 				{
 					"name": "Atualizar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"isbn\": \"978-0-596-52068-7\",\r\n    \"titulo\": \"SLA OQ MANO\",\r\n    \"dataPublicacao\": \"1980-01-01\",\r\n    \"genero\": \"FICCAO\",\r\n    \"preco\": 20,\r\n    \"idAutor\": \"b838e407-c656-450b-be99-979a0c532076\"\r\n}",
+							"raw": "{\r\n    \"isbn\": \"978-0-596-52068-7\",\r\n    \"titulo\": \"SLA OQ MANO\",\r\n    \"dataPublicacao\": \"1980-01-01\",\r\n    \"genero\": \"FICCAO\",\r\n    \"preco\": 20,\r\n    \"idAutor\": \"018f07a8-3e65-48bb-9241-f99d5535e5f3\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -227,12 +254,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/livros/:id",
-							"protocol": "http",
+							"raw": "{{baseURL}}/livros/:id",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"livros",
 								":id"
@@ -240,7 +265,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "3ff34e71-f239-4a82-ab05-f1df9d381d95"
+									"value": "054f9978-6e40-4238-b5ee-0b7116f49cdd"
 								}
 							]
 						}
@@ -250,15 +275,23 @@
 				{
 					"name": "Obter Detalhes",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/livros/:id",
-							"protocol": "http",
+							"raw": "{{baseURL}}/livros/:id",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"livros",
 								":id"
@@ -266,7 +299,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "c7daf873-dd8a-40e4-ad6e-9f8778cdd24d"
+									"value": "054f9978-6e40-4238-b5ee-0b7116f49cdd"
 								}
 							]
 						}
@@ -276,15 +309,23 @@
 				{
 					"name": "Deletar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/livros/:id",
-							"protocol": "http",
+							"raw": "{{baseURL}}/livros/:id",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"livros",
 								":id"
@@ -307,7 +348,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJraWQiOiJmY2I4YWZlNy1kNGVlLTRkMzItOTljZi0yNTQ3ODJiYmE5NzYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJnZXJlbnRlIiwiYXVkIjoiY2xpZW50LXByb2R1Y3Rpb24iLCJuYmYiOjE3NDQ3Mzg0NDEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MCIsImV4cCI6MTc0NDc0MjA0MSwiaWF0IjoxNzQ0NzM4NDQxLCJqdGkiOiJlMGQ5YjM5Zi1kNTdjLTRjMTgtOGE2NS0wZTA1N2Y0YjU1NjAiLCJhdXRob3JpdGllcyI6WyJHRVJFTlRFIl0sImVtYWlsIjoiZ2VyZW50ZUBlbWFpbC5jb20ifQ.dPQk2tN3ojzTwGz8oUg_sqIOA296g9pVdYpZEWt_ivJO2zaN4v_YbMFcdwbAePRE0uGe6I8FFYQCUcM24xc8uGFpxKidci8ZzaEFXEX-jA1kVR7Hr7oOk6M56sHfuSf1e3-CNC38Dhi0ZjIX3mZVCQk3SNFuqUmYKig_4cpUUdmMgtuvr2rWEpdutudt_WVFA1iFLnGzdaJKk_KUevQl_tFghhmwt2n8C25mUlNmByvzDEfCfDp8e7YtZokjuMM0tDOWDY2d_rwTiqq55HylIhHJcRuowJXlM2J2V11ere6UpX0pbtkOPUrPaaP5c7gEXQalausBjXYtDCKroNUVKw",
+									"value": "{{Token}}",
 									"type": "string"
 								}
 							]
@@ -322,12 +363,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/livros?dataPublicacao=&pagina=0&tamanhoPagina=1",
-							"protocol": "http",
+							"raw": "{{baseURL}}/livros?nomeAutor=ED&pagina=0&tamanhoPagina=1",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"livros"
 							],
@@ -344,8 +383,7 @@
 								},
 								{
 									"key": "nomeAutor",
-									"value": "mari",
-									"disabled": true
+									"value": "ED"
 								},
 								{
 									"key": "genero",
@@ -354,7 +392,8 @@
 								},
 								{
 									"key": "dataPublicacao",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "pagina",
@@ -381,7 +420,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"login\": \"gerente\",\r\n    \"senha\": \"admin123\",\r\n    \"email\": \"pedro.lapa1911@gmail.com\",\r\n    \"roles\": [\r\n        \"GERENTE\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"login\": \"cliente\",\r\n    \"senha\": \"cliente123\",\r\n    \"email\": \"cliente@gmail.com\",\r\n    \"roles\": [\r\n        \"CLIENTE\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -389,12 +428,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/usuarios",
-							"protocol": "http",
+							"raw": "{{baseURL}}/usuarios",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"usuarios"
 							]
@@ -411,16 +448,11 @@
 					"name": "Salvar",
 					"request": {
 						"auth": {
-							"type": "basic",
-							"basic": [
+							"type": "bearer",
+							"bearer": [
 								{
-									"key": "password",
-									"value": "admin123",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "gerente",
+									"key": "token",
+									"value": "{{Token}}",
 									"type": "string"
 								}
 							]
@@ -429,7 +461,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"clientId\": \"meu-client\",\r\n    \"clientSecret\": \"client-secret\",\r\n    \"redirectURI\": \"http://localhost:8080/authorized\",\r\n    \"scope\": \"GERENTE\"\r\n}",
+							"raw": "{\r\n    \"clientId\": \"meu-client\",\r\n    \"clientSecret\": \"client-secret\",\r\n    \"redirectURI\": \"http://localhost:8080/authorized\",\r\n    \"scope\": \"CLIENTE\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -437,12 +469,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/clients",
-							"protocol": "http",
+							"raw": "{{baseURL}}/clients",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"clients"
 							]
@@ -462,18 +492,18 @@
 							"type": "oauth2",
 							"oauth2": [
 								{
-									"key": "grant_type",
-									"value": "client_credentials",
+									"key": "scope",
+									"value": "CLIENTE",
 									"type": "string"
 								},
 								{
 									"key": "accessTokenUrl",
-									"value": "http://localhost:8080/oauth2/token",
+									"value": "{{baseURL}}/oauth2/token",
 									"type": "string"
 								},
 								{
-									"key": "scope",
-									"value": "GERENTE",
+									"key": "grant_type",
+									"value": "client_credentials",
 									"type": "string"
 								},
 								{
@@ -522,18 +552,16 @@
 								},
 								{
 									"key": "scope",
-									"value": "GERENTE",
+									"value": "CLIENTE",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8080/oauth2/token",
-							"protocol": "http",
+							"raw": "{{baseURL}}/oauth2/token",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"oauth2",
 								"token"
@@ -550,12 +578,27 @@
 							"oauth2": [
 								{
 									"key": "clientSecret",
-									"value": "secret-production",
+									"value": "{{client_secret}}",
 									"type": "string"
 								},
 								{
 									"key": "clientId",
-									"value": "client-production",
+									"value": "{{client_id}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{baseURL}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{baseURL}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{baseURL}}/authorized",
 									"type": "string"
 								},
 								{
@@ -564,23 +607,8 @@
 									"type": "string"
 								},
 								{
-									"key": "authUrl",
-									"value": "http://localhost:8080/oauth2/authorize",
-									"type": "string"
-								},
-								{
-									"key": "redirect_uri",
-									"value": "http://localhost:8080/authorized",
-									"type": "string"
-								},
-								{
 									"key": "grant_type",
 									"value": "authorization_code",
-									"type": "string"
-								},
-								{
-									"key": "accessTokenUrl",
-									"value": "http://localhost:8080/oauth2/token",
 									"type": "string"
 								},
 								{
@@ -605,7 +633,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Basic bWV1LWNsaWVudDpjbGllbnQtc2VjcmV0",
+								"value": "Basic YWRtaW4xMjM=",
 								"type": "text"
 							}
 						],
@@ -624,18 +652,16 @@
 								},
 								{
 									"key": "redirect_uri",
-									"value": "http://localhost:8080/authorized",
+									"value": "{{baseURL}}/authorized",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8080/oauth2/token",
-							"protocol": "http",
+							"raw": "{{baseURL}}/oauth2/token",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
 								"oauth2",
 								"token"
